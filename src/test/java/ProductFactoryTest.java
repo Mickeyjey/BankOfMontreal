@@ -1,10 +1,7 @@
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.mockito.Mock;
-
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 public class ProductFactoryTest {
 
@@ -14,15 +11,14 @@ public class ProductFactoryTest {
 
     @Test
     public void getStockProduct() {
-        when(stock1.currentPrice).thenReturn(123.0);
-        Assertions.assertEquals(123.0,stock1.currentPrice);
-
+        Product product = new ProductFactory().getProduct("T2","T43","REST");
+        Assertions.assertEquals(stock1.getClass(),product.getClass());
     }
 
     @Test
     public void getFuturesProduct() {
-        when(future.currentPrice).thenReturn(123.0);
-        Assertions.assertEquals(123.0,future.currentPrice);
-
+        Product product = new ProductFactory().getProduct("T2","T43","REST",89,100);
+        Assertions.assertEquals(future.getClass(),product.getClass());
     }
+
 }
