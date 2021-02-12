@@ -14,15 +14,15 @@ public class ProductFactoryTest {
 
     @Test
     public void getStockProduct() {
-        when(stock1.price("try","go")).thenReturn(123.0);
-        Assertions.assertEquals(123.0,stock1.price("try","go"));
+        when(stock1.currentPrice).thenReturn(123.0);
+        Assertions.assertEquals(123.0,stock1.currentPrice);
 
     }
 
     @Test
     public void getFuturesProduct() {
-        when(future.price("try","go")).thenReturn(123.0);
-        Assertions.assertEquals(123.0,future.price("try","go"));
+        when(future.currentPrice).thenReturn(123.0);
+        Assertions.assertEquals(123.0,future.currentPrice);
 
     }
 }

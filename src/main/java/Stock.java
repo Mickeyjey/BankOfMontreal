@@ -6,11 +6,8 @@ public class Stock extends Product{
         this.productId =productId;
         this.exchange = exchange;
         this.ticker = ticker;
+        this.getPrice(exchange, ticker);
     }
 
-    @Override
-    public double price(thise, String ticker) {
-        return 0;
-    }
 
 }

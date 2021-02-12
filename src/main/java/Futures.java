@@ -1,16 +1,12 @@
 public class Futures extends Product{
 
-    public Futures(String productId,String exchange, String contractCode, int month, int year) {
+    private String exchange;
+    private String contractCode;
+    private int month;
+    private int year;
 
+    public Futures(String ProductId,String exchange, String contractCode, int month, int year) {
+        this.getPrice(exchange, contractCode, month, year);
     }
 
-    @Override
-    public double price(String exchange, String ticker) {
-        return 0;
-    }
-
-    @Override
-    public double price(String exchange, String contractCode, int month, int year) {
-        return 0;
-    }
 }
